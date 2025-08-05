@@ -1,0 +1,29 @@
+public class Demo {
+	
+	public static void main(String[] psna) 
+	{
+		
+	    int n = 5;
+	   
+	    
+	    for(int i=0;i<n;i++)//Rows
+	    {
+	    	int sp = n-i-1;
+	    	for(int j=0;j<sp;j++)//Space
+	    		System.out.print("  ");
+	    	
+	    	int star = 2*i+1;
+	    	for(int k=0; k<star;k++)//star
+	    	{
+	    		if(i==n-1 || k==0 || k==star-1 || k==star/2)
+	    		System.out.print("* ");
+	    		else
+	    			System.out.print("  ");
+	    	}
+	    	
+		    System.out.println();
+	    }
+	    
+	    
+	}
+}
