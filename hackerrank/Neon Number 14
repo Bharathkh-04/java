@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int b=(int)Math.pow(n,2);
+        int digit=0;
+        // System.out.println(b);
+        while(b>0)
+        {
+            digit+=b%10;
+            b=b/10;
+        }
+        if(n==digit)
+        {
+            System.out.println("true");
+        }
+        else
+            System.out.println("false");
+    }
+}
