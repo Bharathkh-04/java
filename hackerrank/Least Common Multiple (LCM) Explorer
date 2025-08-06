@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int great=0;
+        int small=0;
+        if(a>b)
+        {
+            great=a;
+            small=b;
+        }
+        else 
+        {
+            great=b;
+            small=a;
+        }
+            
+        int temp=0;
+        int lcm;
+        int s=0;
+        while(great!=0)
+        {
+            if(great<small)
+            {
+                temp=great;
+                great=small;
+                small=temp;
+            }
+            great=great%small;
+        }
+        lcm=(a*b)/small;
+        System.out.println(lcm);
+    }
+}
