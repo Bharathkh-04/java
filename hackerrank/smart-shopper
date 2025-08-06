@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int cost1=sc.nextInt();
+        int quantity1=sc.nextInt();
+        int cost2=sc.nextInt();
+        int quantity2=sc.nextInt();
+        int cost3=sc.nextInt();
+        int quantity3=sc.nextInt();
+        float budget=sc.nextFloat();
+        float tax;
+        float tot;
+        float total=cost1*quantity1+cost2*quantity2+cost3*quantity3;
+        tax=total/10;
+        tot=tax+total;
+        System.out.printf("Total (Before Tax): %.2f \n",total);
+        System.out.printf("Total (After Tax): %.2f \n",tot);
+        if(tot<budget)
+        {
+            System.out.println("Within Budget");
+        }
+        else{
+            System.out.println("Over Budget");
+        }
+        
+        
+        
+        
+    }
+}
