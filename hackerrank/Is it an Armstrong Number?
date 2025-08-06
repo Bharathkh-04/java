@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int temp=n;
+        int count=0;
+        int b=0;
+        int digit=0;
+        if(n==0)
+            count=1;
+        else
+        {
+        while(n>0)
+        {   count++;
+            digit=n%10;
+            n=n/10;
+        }
+            int org = temp;
+        while(temp>0)
+        {   
+            digit=temp%10;
+            b+=(int)Math.pow(digit,count);
+            temp=temp/10;
+        }
+        if(b==org)
+        {
+                System.out.println("true");
+        }
+        else
+                System.out.println("false");
+             
+           }
+        }
+
+    }
+
+
