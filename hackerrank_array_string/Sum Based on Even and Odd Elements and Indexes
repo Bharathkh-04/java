@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        int even=0;
+        int odd=0;
+        int evenelement=0;
+        int oddelement=0;
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {   if(i%2==0)
+            {
+            evenelement+=a[i];
+            }
+            else 
+            {
+                oddelement+=a[i];
+            }
+            if(a[i]%2==0 )
+            {
+                even+=a[i];
+            }
+            else
+            {
+                odd+=a[i];
+            }
+        }System.out.print(even+" ");
+        System.out.print(odd+" ");
+        System.out.print(evenelement+" ");
+         System.out.print(oddelement+" ");
+    }
+}
