@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        int neg=0;
+        int pos=0;
+        int zero=0;
+        float positive;
+        float negative;
+        float zeros;
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {   
+            if(a[i]<0)
+            {
+                neg++;
+                
+            }
+            else if(a[i]>0)
+            {
+                pos++;
+            }
+            else
+            {
+                zero++;
+            }   
+        }positive=(float)pos/n;
+        negative=(float)neg/n;
+        zeros=(float)zero/n;
+     
+        //System.out.println(positive);
+        System.out.printf("%.6f\n",positive);
+        System.out.printf("%.6f\n",negative);
+        System.out.printf("%.6f\n",zeros);
+    }
+}
