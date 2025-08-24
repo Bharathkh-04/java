@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    long n=sc.nextLong();
+    long a[]=new long[(int)n];
+    long min1=Long.MAX_VALUE;
+    long min2=Long.MAX_VALUE;
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextLong();
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]<min1)
+            {
+                min2=min1;
+                min1=a[i];
+            }
+            else if(a[i]!=min1 && a[i]<min2)
+            {   
+                min2=a[i];
+            }
+        }
+        if(min2==Long.MAX_VALUE)
+            System.out.println(-1);
+        else
+            System.out.println(min2);
+    }
+}
+
+  
